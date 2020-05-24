@@ -1,0 +1,15 @@
+def select_sort(nums):
+
+    n = len(nums)
+
+    for i in range(n):
+        for j in range(i+1, n):
+            if nums[j] < nums[i]:
+                nums[i], nums[j] = nums[j], nums[i]
+
+    return nums
+
+"""
+说明：选择排序每次将最小数排到首位，从前往后，最终保证最后元素为最大值
+时间复杂度：O(n^2)
+"""
