@@ -1,0 +1,15 @@
+def bubble_sort(nums):
+    
+    n = len(nums)
+
+    for i in range(n):
+        for j in range(1, n-i):
+            if nums[j] < nums[j-1]:
+                nums[j-1], nums[j] = nums[j], nums[j-1]
+
+    return nums
+
+"""
+说明：冒泡排序每次将最大元素排到最后，从后往前，最终保证第一个元素为最小值
+时间复杂度：O(n^2)
+"""
